@@ -26,7 +26,7 @@ export default function TextForm(props) {
   const [text, setText] = useState("");
   return (
     <>
-    <div className="container">
+    <div className="container" style={{color:props.mode==='dark'?'white':'#03105a'}}>
       <h1>{props.heading}</h1>
       <div className="mb-3">
         <label htmlFor="exampleFormControlTextarea1" className="form-label">
@@ -37,6 +37,7 @@ export default function TextForm(props) {
           value={text}
           onChange={handleOnChange}
           rows="8"
+          style={{backgroundColor:props.mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'#03105a'}}
         ></textarea>
       </div>
       <button className="btn btn-primary mx-2" onClick={handleUpClick}>
@@ -55,12 +56,12 @@ export default function TextForm(props) {
         Remove Extra Spaces
       </button>
     </div>
-    <div className="container my-3">
+    <div className="container my-3"  style={{color:props.mode==='dark'?'white':'#03105a'}}>
       <h2>Your text summary</h2>
       <p>{text.split(" ").length} words and {text.length} characters</p>
       <p>{0.008*text.split(" ").length} Minutes read</p>
       <h2>Preview</h2>
-      <p>{text}</p>
+      <p>{text.length>0?text:"Enter your text into textarea to preview here."}</p>
     </div>
     </>
   );
