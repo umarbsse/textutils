@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 
 import React, { useState } from "react";
-
+//testasetase
 function App() {
   const [mode, setMode] = useState('light');
   const [alert, setAlert] = useState(null);
