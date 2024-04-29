@@ -32,7 +32,7 @@ Navbar.propTypes = {
   title: PropTypes.string.isRequired,
   aboutTitle: PropTypes.string.isRequired,
 };
-/*Navbar.defaultProps = {
+Navbar.defaultProps = {
     title: "My Default Title",
     aboutTitle: "My About us title here",
-};*/
+};
