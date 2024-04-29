@@ -6,10 +6,11 @@ import TextForm from "./components/TextForm";
 
 import React, { useState } from "react";
 
-import{BrowserRouter,
+/*import{BrowserRouter,
   Routes,
   Route,
   }from "react-router-dom";
+  */
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -44,16 +45,18 @@ function App() {
   }
   return (
     <>
-    <BrowserRouter>
+    {/*<BrowserRouter>*/}
       <Navbar title="TextUtils" aboutTitle="About" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
       <div className="container my-3">
-        <Routes>
-          <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze"  mode={mode} />} />
-          <Route path="about" element={<About/>} />
-        </Routes>
+        {/* <Routes>*/}
+         {/* <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze"  mode={mode} />} />*/}
+        {/*  <Route path="about" element={<About/>} />*/}
+        {/*</Routes>*/}
+        <TextForm showAlert={showAlert} heading="Enter the text to analyze"  mode={mode} />
+        <About/>
       </div>
-      </BrowserRouter>
+  {/*    </BrowserRouter> */}
     </>
 
 
